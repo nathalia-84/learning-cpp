@@ -143,7 +143,7 @@ void agendarHorario(string medico, string dia, string hora) {
   cout << "***************************\n";
 }
 
-
+// Ver as consultas agendadas para um determinado medico
 void verAgenda(string medico) {
   cout << "\n####  Consultas agendadas   ####\n\n";
   cout << "*************************\n";
@@ -183,12 +183,19 @@ void excluirMedico(string medico) {
   cout << "\n***************************\n";
   auto it = medicos.find(medico); // encontra o iterador para o medico selecionado
   if (it != medicos.end()) { // verifica se o medico foi encontrado
-  medicos.erase(it); // exclui o medico
+    medicos.erase(it); // exclui o medico
     cout << "Medico excluido." << endl;
   } else {
     cout << "Medico nao existente no sistema." << endl;
   }
   cout << "***************************\n";
+
+  for(auto i : agendamentos){
+    if(i.second.medico == medico) {
+      long long int key_to_erase = i.first;
+      agendamentos.erase(key_to_erase);
+    }
+  }
 }
 
 // Sobrescrever no arquivo medicos.txt e no arquivo agendamentos.txt os dados inseridos na sessao.

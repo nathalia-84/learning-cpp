@@ -112,7 +112,7 @@ int main()
         cout << "2 - Listar especialidades\n";
         cout << "3 - Adicionar um novo medico\n";
         cout << "4 - Consultar agendamentos\n";
-        cout << "5 - Alterar a especialidade de um médico\n";
+        cout << "5 - Alterar a especialidade de um medico\n";
         cout << "6 - Excluir medico\n";
         cout << "7 - Sair\n";
         cout << "-> :";
@@ -199,7 +199,7 @@ int main()
   /* Caso o perfil não exista */
   else
   {
-    cout << "Perfil não localizado\n"
+    cout << "Perfil nao localizado\n"
          << endl;
   }
 
